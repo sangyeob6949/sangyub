@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+plt.figure(figsize=(10, 6))
+plt.scatter(range(len(Y_test)), Y_test, color='blue', label='Actual Values', marker='o')
+plt.scatter(range(len(Y_pred_binary)), Y_pred_binary, color='red', label='predicted Values', marker='x')
+plt.title('Comparison of Actual and Predicted Values')
+plt.xlabel('Data Index')
+plt.ylabel('Class (0 or 1)')
+plt.legend()
+plt.savefig("./linear_regression.png")
